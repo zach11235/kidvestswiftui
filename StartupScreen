@@ -12,7 +12,7 @@ struct ContentView: View {
                 .foregroundColor(.blue)
                 .padding()
             
-            NavigationLink(destination: SelectServices(),
+            NavigationLink(destination: SignUp(),
                            label: { Text("Sign up")
                     .foregroundColor(.black)
                     .frame(width: 200, height: 50, alignment: .center)
@@ -21,7 +21,7 @@ struct ContentView: View {
                     .shadow(color: .secondary, radius: 8, x: 1, y: 1)
                 
             })
-            NavigationLink(destination: HomeScreen(),
+            NavigationLink(destination: LogIn(),
                            label: { Text("Log in")
                     .foregroundColor(.black)
                     .frame(width: 200, height: 50, alignment: .center)
