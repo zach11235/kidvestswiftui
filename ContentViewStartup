@@ -13,7 +13,7 @@ struct ContentView: View {
                 .padding()
             
             NavigationLink(destination: SelectServices(),
-                           label: { Text("Link an account")
+                           label: { Text("Sign up")
                     .foregroundColor(.black)
                     .frame(width: 200, height: 50, alignment: .center)
                     .background(Color.white)
@@ -21,6 +21,17 @@ struct ContentView: View {
                     .shadow(color: .secondary, radius: 8, x: 1, y: 1)
                 
             })
+            NavigationLink(destination: HomeScreen(),
+                           label: { Text("Log in")
+                    .foregroundColor(.black)
+                    .frame(width: 200, height: 50, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: .secondary, radius: 8, x: 1, y: 1)
+                
+            })
+                .padding()
+          
         }
         .navigationBarHidden(true)
         }
