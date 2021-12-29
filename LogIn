@@ -1,0 +1,63 @@
+import SwiftUI
+
+struct LogIn: View {
+    
+    @State var password = String()
+    @State var number = Int()
+    
+    init(){
+           UITableView.appearance().backgroundColor = .clear
+       }
+    
+    var body: some View {
+        
+        
+        VStack{
+            Spacer()
+        Text("Log in to KidVest")
+                .bold()
+                .lineLimit(0)
+                .font(.title2)
+                .padding()
+            
+            Form{
+                Section{
+                    TextField("Enter your phone number", text: $password)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(8)
+                        .shadow(color: .secondary, radius: 2, x: 1, y: 1)
+                }
+                Section{
+                    TextField("Create a password", text: $password)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(8)
+                        .shadow(color: .secondary, radius: 2, x: 1, y: 1)
+                }
+            }
+            NavigationLink(destination: ContentView(), label: { Text("Back")
+                    .foregroundColor(.secondary)
+            })
+            Button(action: {
+                
+                
+            }, label: {Text("Log in")})
+                .frame(width: 200, height: 50)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(8)
+                .shadow(color: .secondary, radius: 2, x: 1, y: 1)
+            Spacer()
+            Spacer()
+        }
+        .padding()
+        .navigationBarHidden(true)
+    }
+}
+
+struct LogIn_Previews: PreviewProvider {
+    static var previews: some View {
+        LogIn()
+    }
+}
