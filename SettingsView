@@ -2,24 +2,21 @@ import SwiftUI
 
 struct Settings: View {
     var body: some View {
-        VStack(alignment: .center){
+        VStack(){
             
-        Button(action: {
+            Spacer()
             
-        }, label: { Text("Unlink")
-                .frame(width: 200, height: 50, alignment: .center)
-                .foregroundColor(.black)
-                .background(Color.white)
-                .cornerRadius(8)
-                .shadow(color: .secondary, radius: 2, x: 1, y: 1)
-        })
-            Divider()
             NavigationLink(destination: HomeScreen(),
                            label: {Text("Back")})
                 .foregroundColor(.secondary)
     }
         
+        .padding()
         .navigationBarHidden(true)
+    }
+    
+    func unlink(){
+        
     }
 }
 
